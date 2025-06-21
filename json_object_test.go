@@ -7,18 +7,20 @@ import (
 )
 
 type Customer struct {
-	FirstName string
-	LastName  string
-	Age       uint
-	Married   bool
+	FirstName  string
+	MiddleName string
+	LastName   string
+	Age        uint
+	Married    bool
 }
 
 func TestJSONObject(t *testing.T) {
 	customer := Customer{
-		FirstName: "Bobi",
-		LastName:  "Bubi",
-		Age:       10,
-		Married:   false,
+		FirstName:  "Bobi",
+		MiddleName: "Bebi",
+		LastName:   "Bubi",
+		Age:        10,
+		Married:    false,
 	}
 
 	bytes, err := json.Marshal(customer)
